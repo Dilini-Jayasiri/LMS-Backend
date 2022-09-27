@@ -10,7 +10,6 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Data
 public class CourseDto {
-
     private String courseId;
     private String CourseName;
     private String Description;
