@@ -11,8 +11,8 @@ import org.springframework.mail.javamail.JavaMailSender;
 
 @SpringBootApplication
 public class LmsBackendApplication {
-	@Autowired
-	private EmailSenderService senderService;
+//	@Autowired
+//	private EmailSenderService senderService;
 
 	public static void main(String[] args) {
 
@@ -25,10 +25,10 @@ public class LmsBackendApplication {
 		return new ModelMapper();
 	}
 
-	@EventListener(ApplicationReadyEvent.class)
-	public void sendEmail(){
-		senderService.sendEmail("sajee.thamanga@gmail.com","This is subject","This is body");
-	}
+//	@EventListener(ApplicationReadyEvent.class)
+//	public void sendEmail(){
+//		senderService.sendEmail("sajee.thamanga@gmail.com","This is subject","This is body");
+//	}
 
 
 }
