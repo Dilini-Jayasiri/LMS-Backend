@@ -18,11 +18,11 @@ public class StudentCourseEnroll {
 
     private Date enrollDate;
     @OneToOne
-    @JoinColumn(name = "course_id_course_id")
+    @JoinColumn(name = "course_id")
     private Course courseId;
 
     @OneToOne
-    @JoinColumn(name = "student_id_student_id")
+    @JoinColumn(name = "student_id")
     private Student studentId;
 
     public StudentCourseEnroll(Date enrollDate, Course courseId, Student studentId) {
