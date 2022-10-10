@@ -2,6 +2,7 @@ package com.example.LMSBackend.Controller;
 
 import com.example.LMSBackend.Model.EmailMessage;
 import com.example.LMSBackend.Service.EmailSenderService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
