@@ -26,7 +26,7 @@ public class MarksController {
         return marksservice.marks(newMarks);
     }
 
-    @GetMapping("/view/{studentId}")
-    public List<GetMarksDto> getMarks(@PathVariable Long studentId ) {
-        return marksservice.getStudentMarks(studentId);}
+    @GetMapping("/view/{userId}")
+    public List<GetMarksDto> getMarks(@PathVariable Long userId ) {
+        return marksservice.getStudentMarks(userId);}
 }

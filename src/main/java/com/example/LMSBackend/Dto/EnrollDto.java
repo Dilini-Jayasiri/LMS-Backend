@@ -16,5 +16,5 @@ import java.util.Date;
 public class EnrollDto {
     private Date enrollDate;
     private String courseId;
-    private Long studentId;
+    private Long userId;
 }

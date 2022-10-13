@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Data
 
 public class UpdateMarks {
-
+    @Id
     private Double marks;
 
     @OneToOne

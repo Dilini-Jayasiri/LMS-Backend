@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class MarksDto {
     private Double marks;
     private String courseId;
-    private Long studentId;
+    private Long userId;
 }
