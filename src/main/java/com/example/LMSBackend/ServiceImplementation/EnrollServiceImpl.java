@@ -2,12 +2,10 @@ package com.example.LMSBackend.ServiceImplementation;
 
 import com.example.LMSBackend.Dto.EnrollDto;
 import com.example.LMSBackend.Model.Course;
-import com.example.LMSBackend.Model.Student;
 import com.example.LMSBackend.Model.StudentCourseEnroll;
 import com.example.LMSBackend.Model.User;
 import com.example.LMSBackend.Repository.CourseRepository;
 import com.example.LMSBackend.Repository.EnrollRepository;
-import com.example.LMSBackend.Repository.StudentRepository;
 import com.example.LMSBackend.Repository.UserRepository;
 import com.example.LMSBackend.Service.EnrollService;
 import lombok.RequiredArgsConstructor;

@@ -21,13 +21,13 @@ public class UpdateMarks {
 
     @OneToOne
     @JoinColumn(name = "student_id")
-    private Student studentId;
+    private User userId;
 
     @OneToOne
     @JoinColumn(name = "marks_id")
     private Marks marksId;
 
-    public UpdateMarks(Double marks, Marks marksId, Course courseId, Student studentId) {
+    public UpdateMarks(Double marks, Marks marksId, Course courseId, User userId) {
       this.marks = marks;
     }
 }
