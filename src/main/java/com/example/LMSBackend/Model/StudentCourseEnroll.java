@@ -22,12 +22,12 @@ public class StudentCourseEnroll {
     private Course courseId;
 
     @OneToOne
-    @JoinColumn(name = "student_id")
-    private Student studentId;
+    @JoinColumn(name = "user_id")
+    private User UserId;
 
-    public StudentCourseEnroll(Date enrollDate, Course courseId, Student studentId) {
+    public StudentCourseEnroll(Date enrollDate, Course courseId, User userId) {
         this.enrollDate = enrollDate;
         this.courseId = courseId;
-        this.studentId = studentId;
+        this.UserId = userId;
     }
 }

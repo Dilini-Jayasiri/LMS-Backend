@@ -9,5 +9,5 @@ import java.util.List;
 public interface MarksService {
     boolean marks(MarksDto newMarks);
 
-    public List<GetMarksDto> getStudentMarks(Long studentId);
+    public List<GetMarksDto> getStudentMarks(Long userId);
 }

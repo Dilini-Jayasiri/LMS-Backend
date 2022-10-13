@@ -24,12 +24,12 @@ public class Marks {
     private Course courseId;
 
     @OneToOne
-    @JoinColumn(name = "student_id")
-    private Student studentId;
+    @JoinColumn(name = "user_id")
+    private User userId;
 
-    public Marks(Double marks, Course courseId, Student studentId) {
+    public Marks(Double marks, Course courseId, User userId) {
         this.marks = marks;
         this.courseId = courseId;
-        this.studentId = studentId;
+        this.userId = userId;
     }
 }
