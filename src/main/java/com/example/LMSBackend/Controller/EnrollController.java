@@ -11,7 +11,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(value = "/enroll")
-@CrossOrigin
+@CrossOrigin(origins ="http://localhost:3006")
 public class EnrollController {
     @Autowired
     private final EnrollService enrollservice;
