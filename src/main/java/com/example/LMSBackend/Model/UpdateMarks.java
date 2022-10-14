@@ -13,7 +13,7 @@ import javax.persistence.*;
 
 public class UpdateMarks {
     @Id
-    private Double marks;
+    private Double UMarks;
 
     @OneToOne
     @JoinColumn(name = "course_id")
@@ -23,11 +23,11 @@ public class UpdateMarks {
     @JoinColumn(name = "student_id")
     private User userId;
 
-    @OneToOne
-    @JoinColumn(name = "marks_id")
-    private Marks marksId;
+    // @OneToOne
+    // @JoinColumn(name = "marks_id")
+    // private Marks marksId;
 
-    public UpdateMarks(Double marks, Marks marksId, Course courseId, User userId) {
-      this.marks = marks;
+    public UpdateMarks(Double UMarks, User userId, Course courseId) {
+      this.UMarks = UMarks;
     }
 }
