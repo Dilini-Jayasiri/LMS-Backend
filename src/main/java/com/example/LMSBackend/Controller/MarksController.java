@@ -15,7 +15,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(value = "/marks")
-@CrossOrigin
+@CrossOrigin(origins ="http://localhost:3006")
 public class MarksController {
     @Autowired
     private final MarksService marksservice;
