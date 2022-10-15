@@ -17,4 +17,5 @@ public class Course {
     private String courseId;
     private String CourseName;
     private String Description;
+    private String academicYear;
 }

@@ -12,7 +12,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
 @RequestMapping(value = "/user")
-@CrossOrigin(origins ="http://localhost:3006")
+@CrossOrigin(origins ="http://localhost:3000")
 @RequiredArgsConstructor
 public class UserController {
     @Autowired
