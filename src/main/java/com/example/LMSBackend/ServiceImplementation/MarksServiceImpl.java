@@ -47,7 +47,7 @@ public class MarksServiceImpl implements MarksService {
             Marks newMark = new Marks(newMarks.getMarks(), existingCourse.get(), existingUser.get());
             marksrepo.save(newMark);
             response = true;
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Exception in Marks service layer");
         }
         return response;
@@ -58,11 +58,24 @@ public class MarksServiceImpl implements MarksService {
     public List<GetMarksDto> getStudentMarks(Long userId) {
         List<Marks> marksList = marksrepo.getMarksById(userId);
         List<GetMarksDto> responsemarkslist = new ArrayList<>();
-        for (Marks mark:marksList) {
-            responsemarkslist.add(new GetMarksDto(mark.getMarks(), mark.getCourseId().getCourseName(), mark.getUserId().getUserId(), mark.getUserId().getName() ));
+        for (Marks mark : marksList) {
+            responsemarkslist.add(new GetMarksDto(mark.getMarks(), mark.getCourseId().getCourseName(),
+                    mark.getUserId().getUserId(), mark.getUserId().getName()));
         }
         return responsemarkslist;
     }
 
+    @Override
+    public boolean updateMarks(MarksDto updatedMarks) {
+        boolean response = false;
+        try {
+            Marks findMarks = marksrepo.updateMarks(updatedMarks.getUserId(), updatedMarks.getCourseId());
+            findMarks.setMarks(updatedMarks.getMarks());
+            marksrepo.save(findMarks);
+        } catch (Exception e) {
+            System.out.println("Exeption in Update Marks in Service Layer");
+        }
+        return response;
+    }
 
 }

@@ -10,4 +10,6 @@ public interface MarksService {
     boolean marks(MarksDto newMarks);
 
     public List<GetMarksDto> getStudentMarks(Long userId);
+
+    boolean updateMarks(MarksDto updatedMarks);
 }

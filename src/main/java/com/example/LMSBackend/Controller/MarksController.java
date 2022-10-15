@@ -15,11 +15,10 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(value = "/marks")
-@CrossOrigin(origins ="http://localhost:3006")
+@CrossOrigin(origins = "http://localhost:3006")
 public class MarksController {
     @Autowired
     private final MarksService marksservice;
-
 
     @PostMapping(value = "/new", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     public boolean marks(@RequestBody MarksDto newMarks) {
@@ -27,6 +26,12 @@ public class MarksController {
     }
 
     @GetMapping("/view/{userId}")
-    public List<GetMarksDto> getMarks(@PathVariable Long userId ) {
-        return marksservice.getStudentMarks(userId);}
+    public List<GetMarksDto> getMarks(@PathVariable Long userId) {
+        return marksservice.getStudentMarks(userId);
+    }
+
+    @PutMapping(value = "/update", consumes = APPLICATION_JSON_VALUE)
+    public boolean updateMarks(@RequestBody MarksDto UpdateMarks) {
+        return marksservice.updateMarks(UpdateMarks);
+    }
 }

@@ -32,4 +32,10 @@ public class Marks {
         this.courseId = courseId;
         this.userId = userId;
     }
+
+    public Marks(Course courseId, User userId) {
+        this.courseId = courseId;
+        this.userId = userId;
+    }
+
 }
