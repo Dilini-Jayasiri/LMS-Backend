@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class TeacherDetailsDto {
-    private Long teacherId;
-    private String password;
+public class SigninDetailsDto {
+    private boolean status;
+    private String role;
 }

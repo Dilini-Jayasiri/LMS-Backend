@@ -4,14 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Id;
+import java.util.Date;
 
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
-public class CourseDto {
+public class EnrollDto {
+    private Date enrollDate;
     private String courseId;
-    private String CourseName;
-    private String Description;
-    private String academicYear;
+    private Long userId;
 }
