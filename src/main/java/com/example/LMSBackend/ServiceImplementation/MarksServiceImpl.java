@@ -72,6 +72,7 @@ public class MarksServiceImpl implements MarksService {
             Marks findMarks = marksrepo.updateMarks(updatedMarks.getUserId(), updatedMarks.getCourseId());
             findMarks.setMarks(updatedMarks.getMarks());
             marksrepo.save(findMarks);
+            response = true;
         } catch (Exception e) {
             System.out.println("Exeption in Update Marks in Service Layer");
         }
