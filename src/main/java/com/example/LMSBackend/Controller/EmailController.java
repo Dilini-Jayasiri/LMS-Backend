@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins ="http://localhost:3006")
+@CrossOrigin(origins ="http://localhost:3000")
 public class EmailController {
 
     private final EmailSenderService emailSenderService;
