@@ -11,7 +11,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
 @RequestMapping(value = "/student")
-@CrossOrigin
+//@CrossOrigin
 @RequiredArgsConstructor
 public class StudentController {
     @Autowired
