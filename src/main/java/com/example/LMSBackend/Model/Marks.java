@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-
+//impliment marks tables
 public class Marks {
 
     @Id
