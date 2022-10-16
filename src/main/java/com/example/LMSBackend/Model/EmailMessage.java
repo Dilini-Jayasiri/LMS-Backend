@@ -7,7 +7,7 @@ public class EmailMessage {
 
     public EmailMessage() {
     }
-
+//impliment getters and setters
     public EmailMessage(String toEmail, String subject, String body) {
         this.toEmail = toEmail;
         this.subject = subject;
