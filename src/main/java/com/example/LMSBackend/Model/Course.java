@@ -12,7 +12,7 @@ import javax.persistence.Id;
 @Entity// @Entity annotation indicates that the class is a persistent Java class.
 @NoArgsConstructor//@NoArgsConstructor will generate a constructor with no parameters.
 @AllArgsConstructor//@NoArgsConstructor will generate a constructor with  parameters.
-@Data//impliment getters and setters
+@Data//impliment getters and setters and to string
 
 public class Course {
 
