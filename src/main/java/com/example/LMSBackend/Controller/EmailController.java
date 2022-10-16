@@ -23,7 +23,7 @@ public class EmailController {
     public EmailController(EmailSenderService emailSenderService) {
         this.emailSenderService = emailSenderService;
     }
-
+//send announcement using mail
     @PostMapping("/send-email")
     public ResponseEntity sendEmail(@RequestBody EmailMessage emailMessage){
         this.emailSenderService.sendEmail(emailMessage.getToEmail(),emailMessage.getSubject(),emailMessage.getBody());

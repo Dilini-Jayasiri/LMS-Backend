@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Service
+@Service //mark as a service class
 @RequiredArgsConstructor
 @Transactional
 public class CourseServiceImpl implements CourceService {
@@ -21,16 +21,17 @@ public class CourseServiceImpl implements CourceService {
     private CourseRepository courseRepo;
     @Autowired
     private ModelMapper modelMapper;
-
+//save course data
     public CourseDto saveCourse(CourseDto courseDto){
         courseRepo.save(modelMapper.map(courseDto, Course.class));
         return courseDto;
     }
+    //get course
     public List<CourseDto> getAllCourses(){
         List<Course> courseList=courseRepo.findAll();
         return modelMapper.map(courseList,new TypeToken<List<CourseDto>>(){}.getType());
     }
-
+//get course using give id
     public CourseDto getCourseByCourseID(String courseId){
         Course course= courseRepo.getCourseByCourseID(courseId);
         return modelMapper.map(course,CourseDto.class);
