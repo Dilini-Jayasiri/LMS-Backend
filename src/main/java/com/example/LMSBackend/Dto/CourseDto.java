@@ -6,9 +6,11 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Id;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
+@NoArgsConstructor //add a constructor with parameters 
+@AllArgsConstructor//add a constructor non parameters 
+@Data //add getters setters ,tostring
+
+//map forntend data
 public class CourseDto {
     private String courseId;
     private String CourseName;
